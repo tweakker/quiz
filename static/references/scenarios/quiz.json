@@ -7,15 +7,19 @@
         "type": "string",
         "command": "ANSWER_TO_USER",
         "nodes": {
-          "pronounceText": "Квиз завершен, правильных ответов: {{counters.right_answers_count.value}}",
+          "pronounceText": "Квиз завершен, правильных ответов: {% if counters.right_answers_count is defined %}{{counters.right_answers_count.value}}{% else %}0{% endif %}",
           "items": [
             {
               "bubble": {
-                "text": "Квиз завершен, правильных ответов: {{counters.right_answers_count.value}}"
+                "text": "Квиз завершен, правильных ответов: {% if counters.right_answers_count %}{{counters.right_answers_count.value}}{% else %}0{% endif %}"
               }
             }
           ]
         }
+      },
+      {
+        "type": "counter_clear",
+        "key": "right_answers_count"
       },
       {
         "type": "break_scenario"

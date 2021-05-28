@@ -77,6 +77,7 @@
       "question_2": {
         "type": "question",
         "required": true,
+        "available": false,
         "questions": [
           {
             "type": "string",

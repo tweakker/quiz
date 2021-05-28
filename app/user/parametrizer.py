@@ -13,6 +13,4 @@ class CustomParametrizer(Parametrizer):
     def _get_user_data(self, text_preprocessing_result=None):
         data = super(CustomParametrizer, self)._get_user_data(text_preprocessing_result)
         data.update({})
-        import pdb
-        pdb.set_trace()
         return data
