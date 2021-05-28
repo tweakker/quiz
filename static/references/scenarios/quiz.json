@@ -1,0 +1,25 @@
+{
+  "quiz": {
+    "type": "form_filling",
+    "form": "quiz_form",
+    "actions": [
+      {
+        "type": "string",
+        "command": "ANSWER_TO_USER",
+        "nodes": {
+          "pronounceText": "Квиз завершен, правильных ответов: {{counters.right_answers_count.value}}",
+          "items": [
+            {
+              "bubble": {
+                "text": "Квиз завершен, правильных ответов: {{counters.right_answers_count.value}}"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "break_scenario"
+      }
+    ]
+  }
+}

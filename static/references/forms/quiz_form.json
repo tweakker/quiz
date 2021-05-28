@@ -1,0 +1,150 @@
+{
+  "quiz_form": {
+    "fields": {
+      "question_1": {
+        "type": "question",
+        "required": true,
+        "available": false,
+        "questions": [
+          {
+            "type": "string",
+            "command": "ANSWER_TO_USER",
+            "nodes": {
+              "pronounceText": "Как звали первого космонавта?",
+              "items": [
+                {
+                  "bubble": {
+                    "text": "Как звали первого космонавта?"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "filler": {
+          "type": "quiz_answer_filler",
+          "right_answers": ["гагарин", "юрий гагарин"]
+        },
+        "on_filled_actions": [
+          {
+            "type": "else",
+            "requirement": {
+              "type": "template",
+              "template": "{{ main_form.question_1 }}"
+            },
+            "action": {
+              "type": "string",
+              "command": "ANSWER_TO_USER",
+              "nodes": {
+                "pronounceText": "Правильно!",
+                "items": [
+                  {
+                    "bubble": {
+                      "text": "Правильно!"
+                    }
+                  }
+                ]
+              }
+            },
+            "else_action": {
+              "type": "string",
+              "command": "ANSWER_TO_USER",
+              "nodes": {
+                "pronounceText": "Правильный ответ: Юрий Гагарин",
+                "items": [
+                  {
+                    "bubble": {
+                      "text": "Правильный ответ: Юрий Гагарин"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "else",
+            "requirement": {
+              "type": "template",
+              "template": "{{main_form.question_1}}"
+            },
+            "action": {
+              "type": "counter_increment",
+              "key": "right_answers_count"
+            }
+          }
+        ]
+      },
+      "question_2": {
+        "type": "question",
+        "required": true,
+        "questions": [
+          {
+            "type": "string",
+            "command": "ANSWER_TO_USER",
+            "nodes": {
+              "pronounceText": "Сколько цветов в радуге?",
+              "items": [
+                {
+                  "bubble": {
+                    "text": "Сколько цветов в радуге?"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "filler": {
+          "type": "number_first"
+        },
+        "on_filled_actions": [
+          {
+            "type": "else",
+            "requirement": {
+              "type": "template",
+              "template": "{{main_form.question_2 == 7}}"
+            },
+            "action": {
+              "type": "string",
+              "command": "ANSWER_TO_USER",
+              "nodes": {
+                "pronounceText": "Верно!",
+                "items": [
+                  {
+                    "bubble": {
+                      "text": "Верно!"
+                    }
+                  }
+                ]
+              }
+            },
+            "else_action": {
+              "type": "string",
+              "command": "ANSWER_TO_USER",
+              "nodes": {
+                "pronounceText": "Правильный ответ: 7",
+                "items": [
+                  {
+                    "bubble": {
+                      "text": "Правильный ответ: 7"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "else",
+            "requirement": {
+              "type": "template",
+              "template": "{{main_form.question_2 == 7}}"
+            },
+            "action": {
+              "type": "counter_increment",
+              "key": "right_answers_count"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

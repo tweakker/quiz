@@ -1,0 +1,31 @@
+{
+  "quiz_start_form": {
+    "fields": {
+      "are_you_ready": {
+        "type": "question",
+        "required": true,
+        "available": true,
+        "questions": [
+          {
+            "type": "string",
+            "command": "ANSWER_TO_USER",
+            "nodes": {
+              "pronounceText": "Ты готов?",
+              "items": [
+                {
+                  "bubble": {
+                    "text": "Ты готов?"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "filler": {
+          "type": "external",
+          "filler": "yes_no_soft_filler"
+        }
+      }
+    }
+  }
+}

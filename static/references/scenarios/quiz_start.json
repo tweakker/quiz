@@ -1,0 +1,33 @@
+{
+  "quiz_start": {
+    "type": "form_filling",
+    "form": "quiz_start_form",
+    "actions": [
+      {
+        "type": "else",
+        "requirement": {
+          "type": "template",
+          "template": "{{ main_form.are_you_ready }}"
+        },
+        "action": {
+          "type": "run_scenario",
+          "scenario": "quiz"
+        },
+        "else_action": {
+          "type": "string",
+          "command": "ANSWER_TO_USER",
+          "nodes": {
+            "pronounceText": "Попробуем в другой раз.",
+            "items": [
+              {
+                "bubble": {
+                  "text": "Попробуем в другой раз."
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
