@@ -17,7 +17,29 @@
                     "text": "Как звали первого космонавта?"
                   }
                 }
-              ]
+              ],
+              "suggestions": {
+                "buttons": [
+                  {
+                    "title": "Гагарин",
+                    "actions": [
+                      {
+                        "text": "Гагарин",
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Титов",
+                    "actions": [
+                      {
+                        "text": "Титов",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           }
         ],
@@ -50,11 +72,11 @@
               "type": "string",
               "command": "ANSWER_TO_USER",
               "nodes": {
-                "pronounceText": "Правильный ответ: Юрий Гагарин",
+                "pronounceText": "Правильный ответ: Гагарин",
                 "items": [
                   {
                     "bubble": {
-                      "text": "Правильный ответ: Юрий Гагарин"
+                      "text": "Правильный ответ: Гагарин"
                     }
                   }
                 ]
@@ -90,7 +112,29 @@
                     "text": "Сколько цветов в радуге?"
                   }
                 }
-              ]
+              ],
+              "suggestions": {
+                "buttons": [
+                  {
+                    "title": "6",
+                    "actions": [
+                      {
+                        "text": "6",
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "7",
+                    "actions": [
+                      {
+                        "text": "7",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           }
         ],
