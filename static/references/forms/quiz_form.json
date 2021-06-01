@@ -22,21 +22,17 @@
                 "buttons": [
                   {
                     "title": "Гагарин",
-                    "actions": [
-                      {
-                        "text": "Гагарин",
-                        "type": "text"
-                      }
-                    ]
+                    "action": {
+                      "text": "Гагарин",
+                      "type": "text"
+                    }
                   },
                   {
                     "title": "Титов",
-                    "actions": [
-                      {
-                        "text": "Титов",
-                        "type": "text"
-                      }
-                    ]
+                    "action": {
+                      "text": "Титов",
+                      "type": "text"
+                    }
                   }
                 ]
               }
@@ -117,21 +113,17 @@
                 "buttons": [
                   {
                     "title": "6",
-                    "actions": [
-                      {
-                        "text": "6",
-                        "type": "text"
-                      }
-                    ]
+                    "action": {
+                      "text": "6",
+                      "type": "text"
+                    }
                   },
                   {
                     "title": "7",
-                    "actions": [
-                      {
-                        "text": "7",
-                        "type": "text"
-                      }
-                    ]
+                    "action": {
+                      "text": "7",
+                      "type": "text"
+                    }
                   }
                 ]
               }

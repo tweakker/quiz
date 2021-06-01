@@ -17,7 +17,25 @@
                     "text": "Ты готов?"
                   }
                 }
-              ]
+              ],
+              "suggestions": {
+                "buttons": [
+                  {
+                    "title": "Да",
+                    "action": {
+                      "text": "Да",
+                      "type": "text"
+                    }
+                  },
+                  {
+                    "title": "Нет",
+                    "action": {
+                      "text": "Нет",
+                      "type": "text"
+                    }
+                  }
+                ]
+              }
             }
           }
         ],
