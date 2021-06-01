@@ -33,4 +33,5 @@ class QuizAnswerFiller(FieldFillerDescription):
 
     @exc_handler(on_error_obj_method_name="on_extract_error")
     def extract(self, text_preprocessing_result: TextPreprocessingResult, user: User, params) -> Optional[bool]:
-        return bool(text_preprocessing_result.words_tokenized_set.intersection(set(self.right_answers)))
+        answer = text_preprocessing_result.human_normalized_text
+        return answer in self.right_answers
